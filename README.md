@@ -16,7 +16,7 @@
     - **spec.bundle.js** defines the files used by _webpack_
 - Extra:
     - **tslint.json**  _Angular TSLint Preset_ (_TypeScript_ linter rules with _Codelyzer_)
-    - **travis.yml** _Travis CI_ configuration
+    - **gitlab-ci.yml** _Gitlab CI_ configuration
 
 
 
