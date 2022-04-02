@@ -1,0 +1,14 @@
+export enum UpdateTypes {
+  RECEIVED = 'RECEIVED',
+  PROCESSING = 'PROCESSING',
+  ACCEPTED = 'ACCEPTED',
+  REJECTED = 'REJECTED',
+  NOT_CLEAR = 'NOT_CLEAR',
+  INVALID = 'INVALID',
+}
+
+export enum TopicStatesTypes {
+  ACTIVATED = 'ACTIVATED',
+  ARCHIVED = 'ARCHIVED',
+  HIDDEN = 'HIDDEN',
+}

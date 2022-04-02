@@ -1,0 +1,28 @@
+stages:
+  - build
+  - test
+  - publish
+
+cache: &global_cache
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+
+build:
+  script:
+    - npm ci
+    - npm run build
+
+test:
+  stage: test
+  script:
+    - npm run test:ci
+
+publish:
+  stage: publish
+  script:
+    - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">.npmrc
+    - npm run publish:lib
+  only:
+    - master
